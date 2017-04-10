@@ -1,9 +1,10 @@
 # バブルソート
 def bubble_sort(ary, len)
   swp = 0
-  (0...len-1).each {|n|
-    (0...len-1-n).each{|j|
-      if ary[j+1] < ary[j]
+  len = len - 1
+  (0...len).each { |n|
+    (0...len-n).each { |j|
+      if ary[j] > ary[j+1]
         ary[j], ary[j+1] = ary[j+1], ary[j] # swapの書き方
         swp += 1
       end
